@@ -1,5 +1,5 @@
 import React from "react";
-import { goToEx01, goToEx02, goToEx03, goToEx04 } from "../cordinator";
+import { goToEx01, goToEx02, goToEx03, goToEx04, goToEx05, goToEx06, goToEx07, goToEx08 } from "../cordinator";
 import { useNavigate } from "react-router-dom";
 
 
@@ -11,13 +11,7 @@ const PaginaInicial = () => {
       <h1>Teste área de Desenvolvimento</h1>
       <h3>Entrega/Instruções :</h3>
       <p>
-        A entrega deve ser feita em um repositório Github, privado (se o
-        repositório estiver público, será automaticamente eliminado); Após
-        finalizar é necessário adicionar o usuário deva5solutions como
-        colaborador para que possamos ter acesso ao seu código; Readme
-        explicando as etapas necessárias para rodar o projeto; Código limpo será
-        um diferencial; Use e abuse de: Criatividade, Teste Unitários, MVC,
-        SOLID, Boas Práticas de Codificação, Performance
+        A entrega deve ser feita em um repositório Github, privado (se o repositório estiver público, será automaticamente eliminado); Após finalizar é necessário adicionar o usuário deva5solutions com colaborador para que possamos ter acesso ao seu código; Readme explicando as etapas necessárias para rodar o projeto; Código limpo serà diferencial; Use e abuse de: Criatividade, Teste Unitários, MVC, SOLID, Boas Práticas de Codificação, Performance.
       </p>
       <nav>
         {/* <input type="checkbox" checked={checked} onChange={handleChange} /> */}
@@ -51,16 +45,16 @@ const PaginaInicial = () => {
         <h2>Teste de Programação</h2>
         <ul>
           <li>
-            <a href="#chapter1">Exercício 05</a>
+          <button onClick={()=>goToEx05(navigate)}>Exercício 05</button>
           </li>
           <li>
-            <a href="#chapter2">Exercício 06</a>
+          <button onClick={()=>goToEx06(navigate)}>Exercício 06</button>
           </li>
           <li>
-            <a href="#chapter3">Exercício 07</a>
+          <button onClick={()=>goToEx07(navigate)}>Exercício 07</button>
           </li>
           <li>
-            <a href="#chapter4">Exercício 08</a>
+          <button onClick={()=>goToEx08(navigate)}>Exercício 04</button>
           </li>
         </ul>
       </nav>

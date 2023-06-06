@@ -1,8 +1,13 @@
 import React from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { solarizedlight } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { goToHome } from "../cordinator";
+import { useNavigate } from "react-router-dom";
+import { a11yDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { Body, CodeContainer } from "./Styled";
 
 const Exercício06 = () => {
+  const navigate = useNavigate();
+
   const javaCalculator = `
     public class Calculadora {
         private double memory;
@@ -55,7 +60,7 @@ calculator.divide(10, 0); // Tentativa de divisão por zero
 // Exibe a mensagem de erro: Error: Division by zero
 
   `;
-  
+
   const javascriptCalculator = `
   class Calculadora {
       constructor() {
@@ -110,25 +115,39 @@ calculator.divide(10, 0); // Tentativa de divisão por zero
   calculator.divide(10, 0); 
 `;
 
+
+const syntaxHighlighterStyle = {
+    ...a11yDark,
+    'code[class*="language-"]': {
+      ...a11yDark['code[class*="language-"]'],
+    
+    },
+  };
+
   return (
-    <div>
+    <Body>
       <h3>
         6. Escreva uma classe que represente uma calculadora com as operações:
         adição, subtração, multiplicação, divisão e memória. Defina também as
         formas de entrada e apresentação do resultado.
       </h3>
-      <p>Execução em Java:</p>
-      <SyntaxHighlighter language="java" style={solarizedlight}>
+      <h2>Execução em Java:</h2>
+      <CodeContainer>
+     <SyntaxHighlighter language="java" style={syntaxHighlighterStyle} >
         {javaCalculator}
       </SyntaxHighlighter>
-      <p>
+      </CodeContainer>
+      <h2>
         Por familiaridade com a linguagem, optei por executá-la também em
         Javascript:
-      </p>
-      <SyntaxHighlighter language="javascript" style={solarizedlight}>
+      </h2>
+      <CodeContainer>
+      <SyntaxHighlighter language="javascript" style={syntaxHighlighterStyle}>
         {javascriptCalculator}
       </SyntaxHighlighter>
-    </div>
+      </CodeContainer>
+      <button onClick={() => goToHome(navigate)}>Voltar</button>
+    </Body>
   );
 };
 

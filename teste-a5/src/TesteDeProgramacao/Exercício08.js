@@ -1,10 +1,14 @@
 import React from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { solarizedlight } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { a11yDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { goToHome } from "../cordinator";
+import { useNavigate } from "react-router-dom";
+import { Body, CodeContainer } from "./Styled";
 
 const Exercício08 = () => {
+  const navigate = useNavigate()
     const stringSemEspacosJava = `
-    public class MyJavaClass {
+    public class StringWithoutSpace {
         public static String processString(String input) {
             // Remover espaços em branco do início e do final
             String trimmed = input.trim();
@@ -23,7 +27,7 @@ const Exercício08 = () => {
         }
     
         public static void main(String[] args) {
-            String input = "  Apple  ";
+            String input = "  Palavra  ";
             String result = processString(input);
             System.out.println("Resultado: " + result);
         }
@@ -43,26 +47,40 @@ const Exercício08 = () => {
     }
   }
   
-  var input = "  Apple  ";
+  var input = "  Palavra  ";
   var result = processString(input);
   console.log("Resultado: " + result);
   
 `;
+
+
+const syntaxHighlighterStyle = {
+  ...a11yDark,
+  'code[class*="language-"]': {
+    ...a11yDark['code[class*="language-"]'],
+  
+  },
+};
   return (
-    <div>
+    <Body>
         <h3>8. Criar um método que receba uma variável do tipo String, remova os espaços em branco do início e do final do conteúdo, altere todas as Letras ‘A’ por ‘B’ e se o tamanho da variável for maior que 3 retorne somente os 3 primeiros caracteres, senão retorne a String inteira.</h3>
-        <p>Execução em Java:</p>
-    <SyntaxHighlighter language="java" style={solarizedlight}>
+        <h2>Execução em Java:</h2>
+        <CodeContainer>
+    <SyntaxHighlighter language="java" style={syntaxHighlighterStyle}>
       {stringSemEspacosJava}
     </SyntaxHighlighter>
-    <p>
+    </CodeContainer>
+    <h2>
       Por familiaridade com a linguagem, optei por executá-la também em
       Javascript:
-    </p>
-    <SyntaxHighlighter language="javascript" style={solarizedlight}>
+    </h2>
+    <CodeContainer>
+    <SyntaxHighlighter language="javascript" style={syntaxHighlighterStyle}>
       {stringSemEspaçosJS}
     </SyntaxHighlighter>
-    </div>
+    </CodeContainer>
+    <button onClick={()=>goToHome(navigate)}>Voltar</button>
+    </Body>
   )
 }
 

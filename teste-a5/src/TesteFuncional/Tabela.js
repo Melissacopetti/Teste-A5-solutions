@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, TableBody, TableContainer, TableData, TableHeader, TableHeaderCell, TableRow } from './Styled';
+import { Container, StyledTable, StyledTableCell, StyledTableHeaderCell, StyledTableRow } from './Styled';
 
 const Tabela = () => {
   const results = [
@@ -13,29 +13,30 @@ const Tabela = () => {
   return (
    
     <Container>
-      <TableContainer>
-        <TableHeader>
-          <TableRow>
-            <TableHeaderCell >Variáveis</TableHeaderCell>
-          </TableRow>
-          <TableRow>
-            <TableHeaderCell>X</TableHeaderCell>
-            <TableHeaderCell>Y</TableHeaderCell>
-            <TableHeaderCell>Z</TableHeaderCell>
-            <TableHeaderCell>Resultado</TableHeaderCell>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          {results.map((result, index) => (
-            <TableRow key={index}>
-              <TableData>{result.x}</TableData>
-              <TableData>{result.y}</TableData>
-              <TableData>{result.z}</TableData>
-              <TableData>{result.Resultado}</TableData>
-            </TableRow>
-          ))}
-        </TableBody>
-      </TableContainer>
+      <StyledTable>
+      <thead>
+        <StyledTableRow>
+          <StyledTableHeaderCell colSpan={5}>Variáveis</StyledTableHeaderCell>
+        </StyledTableRow>
+        <StyledTableRow>
+          <StyledTableHeaderCell>X</StyledTableHeaderCell>
+          <StyledTableHeaderCell>Y</StyledTableHeaderCell>
+          <StyledTableHeaderCell>Z</StyledTableHeaderCell>
+          <StyledTableHeaderCell>Resultado</StyledTableHeaderCell>
+        </StyledTableRow>
+      </thead>
+      <tbody>
+        {results.map((result, index) => (
+          <StyledTableRow key={index}>
+            
+            <StyledTableCell>{result.x}</StyledTableCell>
+            <StyledTableCell>{result.y}</StyledTableCell>
+            <StyledTableCell>{result.z}</StyledTableCell>
+            <StyledTableCell>{result.Resultado}</StyledTableCell>
+          </StyledTableRow>
+        ))}
+      </tbody>
+    </StyledTable>
     </Container>
   );
 };

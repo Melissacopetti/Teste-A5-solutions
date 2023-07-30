@@ -7,6 +7,6 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Geologica', sans-serif;
   }
   body {
-    overflow-x: hidden; /* Oculta a barra de rolagem horizontal em todas as páginas */
+    overflow-x: hidden;
   }
 `;

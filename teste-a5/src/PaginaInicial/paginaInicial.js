@@ -18,15 +18,9 @@ const PaginaInicial = () => {
     <Body>
       {" "}
       <Title>Teste área de Desenvolvimento</Title>
-      <h3>Entrega/Instruções :</h3>
+
       <p>
-        A entrega deve ser feita em um repositório Github, privado (se o
-        repositório estiver público, será automaticamente eliminado); Após
-        finalizar é necessário adicionar o usuário deva5solutions com
-        colaborador para que possamos ter acesso ao seu código; Readme
-        explicando as etapas necessárias para rodar o projeto; Código limpo serà
-        diferencial; Use e abuse de: Criatividade, Teste Unitários, MVC, SOLID,
-        Boas Práticas de Codificação, Performance.
+      Teste para seleção de vaga profissional com Javascript, Java, Banco de Dados e Fluxograma.
       </p>
       <section>
         <h3>Teste Funcional</h3>

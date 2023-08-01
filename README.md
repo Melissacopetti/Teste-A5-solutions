@@ -14,7 +14,6 @@ Bem-vindo(a) ao Teste A5, uma aplicação frontend ReactJS desenvolvida para a s
 * [Arquivos Complementares](#arquivos-complementares)
 * [Link do Projeto](#link-do-projeto)
 * [Funcionalidades](#funcionalidades)
-* [Imagens do Projeto](#imagens-do-projeto)
 
 
 ## Descrição 
@@ -82,7 +81,7 @@ Na pasta anexa "Complementos", você encontrará os seguintes arquivos:
 * Fluxograma: O arquivo com extensão .drawio é um fluxograma criado com a extensão Draw.io. Este fluxograma representa o processo de funcionamento da aplicação e pode ajudar na compreensão geral do projeto.
 
 ## Link do projeto
-[Teste-A5](https://teste-a5.surge.sh/)
+[Teste-A5](https://teste-desenvolvimento.surge.sh/)
 
 
 ## Funcionalidades
@@ -92,8 +91,5 @@ Na pasta anexa "Complementos", você encontrará os seguintes arquivos:
   As questões 6, 7 e 8 foram feitas em Javascript e traduzidas para a linguagem Java, ambos códigos são exibidos. 
 </div>
 
-## Imagens do projeto
-![imagem01](https://github.com/Melissacopetti/Teste-A5-solutions/assets/104647493/dbfe10ba-9230-4a65-a441-0566a48aeb83)
-![imagem02](https://github.com/Melissacopetti/Teste-A5-solutions/assets/104647493/349b3d0e-415b-4239-83fb-bcc76500e37b)
-![imagem03](https://github.com/Melissacopetti/Teste-A5-solutions/assets/104647493/e69480a5-7a24-4f34-b094-14ba1f95c225)
+
 

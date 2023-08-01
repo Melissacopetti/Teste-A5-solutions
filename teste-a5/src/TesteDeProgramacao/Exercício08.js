@@ -6,8 +6,8 @@ import { useNavigate } from "react-router-dom";
 import { Body, CodeContainer } from "./Styled";
 
 const Exercício08 = () => {
-  const navigate = useNavigate()
-    const stringSemEspacosJava = `
+  const navigate = useNavigate();
+  const stringSemEspacosJava = `
     public class StringWithoutSpace {
         public static String processString(String input) {
             // Remover espaços em branco do início e do final
@@ -33,7 +33,7 @@ const Exercício08 = () => {
         }
     }
     `;
-  
+
   const stringSemEspaçosJS = `
   function processString(input) {
     const trimmed = input.trim();
@@ -53,35 +53,38 @@ const Exercício08 = () => {
   
 `;
 
-
-const syntaxHighlighterStyle = {
-  ...a11yDark,
-  'code[class*="language-"]': {
-    ...a11yDark['code[class*="language-"]'],
-  
-  },
-};
+  const syntaxHighlighterStyle = {
+    ...a11yDark,
+    'code[class*="language-"]': {
+      ...a11yDark['code[class*="language-"]'],
+    },
+  };
   return (
     <Body>
-        <h3>8. Criar um método que receba uma variável do tipo String, remova os espaços em branco do início e do final do conteúdo, altere todas as Letras ‘A’ por ‘B’ e se o tamanho da variável for maior que 3 retorne somente os 3 primeiros caracteres, senão retorne a String inteira.</h3>
-        <h2>Execução em Java:</h2>
-        <CodeContainer>
-    <SyntaxHighlighter language="java" style={syntaxHighlighterStyle}>
-      {stringSemEspacosJava}
-    </SyntaxHighlighter>
-    </CodeContainer>
-    <h2>
-      Por familiaridade com a linguagem, optei por executá-la também em
-      Javascript:
-    </h2>
-    <CodeContainer>
-    <SyntaxHighlighter language="javascript" style={syntaxHighlighterStyle}>
-      {stringSemEspaçosJS}
-    </SyntaxHighlighter>
-    </CodeContainer>
-    <button onClick={()=>goToHome(navigate)}>Voltar</button>
+      <h3>
+        8. Criar um método que receba uma variável do tipo String, remova os
+        espaços em branco do início e do final do conteúdo, altere todas as
+        Letras ‘A’ por ‘B’ e se o tamanho da variável for maior que 3 retorne
+        somente os 3 primeiros caracteres, senão retorne a String inteira.
+      </h3>
+      <h2>Execução em Java:</h2>
+      <CodeContainer>
+        <SyntaxHighlighter language="java" style={syntaxHighlighterStyle}>
+          {stringSemEspacosJava}
+        </SyntaxHighlighter>
+      </CodeContainer>
+      <h2>
+        Por familiaridade com a linguagem, optei por executá-la também em
+        Javascript:
+      </h2>
+      <CodeContainer>
+        <SyntaxHighlighter language="javascript" style={syntaxHighlighterStyle}>
+          {stringSemEspaçosJS}
+        </SyntaxHighlighter>
+      </CodeContainer>
+      <button onClick={() => goToHome(navigate)}>Voltar</button>
     </Body>
-  )
-}
+  );
+};
 
-export default Exercício08
+export default Exercício08;

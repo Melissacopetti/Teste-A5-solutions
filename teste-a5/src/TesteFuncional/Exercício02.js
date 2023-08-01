@@ -6,12 +6,12 @@ import { useNavigate } from "react-router-dom";
 import { goToHome } from "../cordinator";
 
 const Exercício02 = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   return (
     <Body>
       <h3>
-        2. Em uma escola , a média final é dada pela média aritmética de
-        três notas. E a mesma tem o seguinte esquema de avaliação:
+        2. Em uma escola , a média final é dada pela média aritmética de três
+        notas. E a mesma tem o seguinte esquema de avaliação:
       </h3>
       <TableImage src={TableImg} alt="tabela com as notas" />
       <p>
@@ -21,9 +21,7 @@ const Exercício02 = () => {
       </p>
       <h2>Fluxograma:</h2>
       <FluxogramaImg src={FluxogramaImage} alt="Fluxograma" />
-      <button onClick={()=>goToHome(navigate)}>Voltar</button>
-
-
+      <button onClick={() => goToHome(navigate)}>Voltar</button>
     </Body>
   );
 };

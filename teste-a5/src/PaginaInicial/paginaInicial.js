@@ -16,12 +16,13 @@ const PaginaInicial = () => {
   const navigate = useNavigate();
   return (
     <Body>
-      {" "}
       <Title>Teste área de Desenvolvimento</Title>
 
       <p>
-      Teste para seleção de vaga profissional com Javascript, Java, Banco de Dados e Fluxograma.
+        Teste para seleção de vaga profissional com Javascript, Java, Banco de
+        Dados e Fluxograma.
       </p>
+
       <section>
         <h3>Teste Funcional</h3>
         <DivButtons>

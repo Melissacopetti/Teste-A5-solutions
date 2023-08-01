@@ -6,7 +6,7 @@ import { goToHome } from "../cordinator";
 import { useNavigate } from "react-router-dom";
 
 const Exercício01 = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const CodigoExercicio = `
   inicio
   leia x
@@ -23,8 +23,6 @@ const Exercício01 = () => {
   fim-se
   escrever: Z, Resultado;
   `;
-  
-
 
   const linha01JS = `
   let x = 3;
@@ -122,48 +120,44 @@ console.log("Resultado: " + resultado);
 `;
   return (
     <Body>
-  <h3>1. Observe o seguinte código:</h3>
-  <pre>{CodigoExercicio}</pre>
-  <p>
-    Simule a execução do algoritmo, e em seguida complete o quadro com os
-    valores finais das variáveis Z e Resultado para os respectivos valores
-    de entrada de X e Y:
-  </p>
-  <h2>Tabela com os Resultados:</h2>
-  <Tabela />
-  <h2>As funções para resolução do exercício encontram-se abaixo:</h2>
+      <h3>1. Observe o seguinte código:</h3>
+      <pre>{CodigoExercicio}</pre>
+      <p>
+        Simule a execução do algoritmo, e em seguida complete o quadro com os
+        valores finais das variáveis Z e Resultado para os respectivos valores
+        de entrada de X e Y:
+      </p>
+      <h2>Tabela com os Resultados:</h2>
+      <Tabela />
+      <h2>As funções para resolução do exercício encontram-se abaixo:</h2>
 
-  <p>Primeira linha:</p>
-  <CodeContainer>
-    <CodeSnippet code={linha01JS} />
-  
-  </CodeContainer>
+      <p>Primeira linha:</p>
+      <CodeContainer>
+        <CodeSnippet code={linha01JS} />
+      </CodeContainer>
 
-  <p>Segunda linha:</p>
-  <CodeContainer>
-    <CodeSnippet code={linha02JS} />
-  
-  </CodeContainer>
+      <p>Segunda linha:</p>
+      <CodeContainer>
+        <CodeSnippet code={linha02JS} />
+      </CodeContainer>
 
-  <p>Terceira linha:</p>
-  <CodeContainer>
-    <CodeSnippet code={linha03JS} />
-  
-  </CodeContainer>
+      <p>Terceira linha:</p>
+      <CodeContainer>
+        <CodeSnippet code={linha03JS} />
+      </CodeContainer>
 
-  <p>Quarta linha:</p>
-  <CodeContainer>
-    <CodeSnippet code={linha04JS} />
-  </CodeContainer>
+      <p>Quarta linha:</p>
+      <CodeContainer>
+        <CodeSnippet code={linha04JS} />
+      </CodeContainer>
 
-  <p>Quinta linha:</p>
-  <CodeContainer>
-    <CodeSnippet code={linha05JS} />
-  </CodeContainer>
+      <p>Quinta linha:</p>
+      <CodeContainer>
+        <CodeSnippet code={linha05JS} />
+      </CodeContainer>
 
-  <button onClick={()=>goToHome(navigate)}>Voltar</button>
-</Body>
-
+      <button onClick={() => goToHome(navigate)}>Voltar</button>
+    </Body>
   );
 };
 

@@ -11,7 +11,6 @@ const Exercício06 = () => {
   const javaCalculator = `
     public class Calculadora {
         private double memory;
-    
         public void add(double a, double b) {
             memory = a + b;
         }
@@ -115,12 +114,10 @@ calculator.divide(10, 0); // Tentativa de divisão por zero
   calculator.divide(10, 0); 
 `;
 
-
-const syntaxHighlighterStyle = {
+  const syntaxHighlighterStyle = {
     ...a11yDark,
     'code[class*="language-"]': {
       ...a11yDark['code[class*="language-"]'],
-    
     },
   };
 
@@ -133,18 +130,18 @@ const syntaxHighlighterStyle = {
       </h3>
       <h2>Execução em Java:</h2>
       <CodeContainer>
-     <SyntaxHighlighter language="java" style={syntaxHighlighterStyle} >
-        {javaCalculator}
-      </SyntaxHighlighter>
+        <SyntaxHighlighter language="java" style={syntaxHighlighterStyle}>
+          {javaCalculator}
+        </SyntaxHighlighter>
       </CodeContainer>
       <h2>
         Por familiaridade com a linguagem, optei por executá-la também em
         Javascript:
       </h2>
       <CodeContainer>
-      <SyntaxHighlighter language="javascript" style={syntaxHighlighterStyle}>
-        {javascriptCalculator}
-      </SyntaxHighlighter>
+        <SyntaxHighlighter language="javascript" style={syntaxHighlighterStyle}>
+          {javascriptCalculator}
+        </SyntaxHighlighter>
       </CodeContainer>
       <button onClick={() => goToHome(navigate)}>Voltar</button>
     </Body>

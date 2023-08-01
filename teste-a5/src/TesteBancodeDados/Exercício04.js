@@ -4,7 +4,7 @@ import { goToHome } from "../cordinator";
 import { useNavigate } from "react-router-dom";
 
 const Exercício04 = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   return (
     <Body>
       <h3>
@@ -14,19 +14,19 @@ const Exercício04 = () => {
       </h3>
       <h2>Consulta de Dados:</h2>
       <CodeContainer>
-      <CodeBox>
-        <Code>
-          {`
+        <CodeBox>
+          <Code>
+            {`
           SELECT Pessoa.Nome, Endereco.CEP, Endereco.Logradouro, Endereco.Bairro, Endereco.Cidade, 
           Endereco.UF, PessoaXEndereco.Numero, PessoaXEndereco.Complemento
           FROM Pessoa
           JOIN PessoaXEndereco ON Pessoa.Id = PessoaXEndereco.IdPessoa
           JOIN Endereco ON PessoaXEndereco.CEP = Endereco.CEP;
         `}
-        </Code>
-      </CodeBox>
+          </Code>
+        </CodeBox>
       </CodeContainer>
-      <button onClick={()=>goToHome(navigate)}>Voltar</button>
+      <button onClick={() => goToHome(navigate)}>Voltar</button>
     </Body>
   );
 };

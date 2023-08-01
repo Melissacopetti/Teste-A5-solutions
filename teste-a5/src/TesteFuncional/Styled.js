@@ -1,30 +1,51 @@
 import styled from "styled-components";
 
+const breakpointMobile = "768px";
+const breakpointTablet = "992px";
+
 export const Body = styled.div`
   display: flex;
   flex-direction: column;
   padding: 2vw;
-  background-color:#ffbe94;
+  background-color: #ffbe94;
+
   p {
     text-align: justify;
     line-height: 120%;
     font-size: 1rem;
     margin: 5px 20px;
     width: 80vw;
-    min-width: 400px;
-    max-width: 1000px;
-    margin-bottom: 30px;
+    margin: 30px 10px;
+
+    @media (max-width: ${breakpointTablet}) {
+      width: 65vw;
+    }
+
+    @media (max-width: ${breakpointMobile}) {
+      width: 90vw;
+    }
   }
+
   h3 {
     font-size: 1.5rem;
     text-decoration: underline;
     color: #e84c24;
-    margin:50px;
+    margin: 20px 50px;
+
+    @media (max-width: ${breakpointMobile}) {
+      margin: 20px;
+    }
   }
+
   h2 {
     font-size: 1.5rem;
     margin: 20px;
+
+    @media (max-width: ${breakpointMobile}) {
+      margin: 10px;
+    }
   }
+
   button {
     background-color: #e74c3c;
     color: #fff;
@@ -39,14 +60,12 @@ export const Body = styled.div`
     opacity: 0.8;
     letter-spacing: 1px;
     box-shadow: #c0392b 0px 7px 2px, #000 0px 8px 5px;
-    margin-top:20px;
-  }
-  &:hover {
-    opacity: 1;
-  }
-  &:active {
-    top: 4px;
-    box-shadow: #c0392b 0px 3px 2px, #000 0px 3px 5px;
+    margin-top: 20px;
+    align-self: center;
+
+    @media (max-width: ${breakpointMobile}) {
+      width: 150px;
+    }
   }
 `;
 
@@ -55,8 +74,10 @@ export const CodeContainer = styled.div`
   color: #fff;
   padding: 10px;
   margin-bottom: 20px;
-  width: 60vw;
-  min-width: 500px;
+  width: 100%;
+  max-width: 60vw;
+  min-width: 300px;
+  margin: 0 auto;
 `;
 
 export const CopyButton = styled.button`
@@ -69,20 +90,14 @@ export const CopyButton = styled.button`
 `;
 
 export const Container = styled.div`
-  width: 50vw;
-  margin-right: auto;
-  margin-left: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 `;
 
 export const TableContainer = styled.table`
-  width: 30vw;
+  width: 100%;
   border: 1px solid #eeeeee;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
 `;
 
 export const TableHeader = styled.thead`
@@ -102,6 +117,7 @@ export const TableBody = styled.tbody`
 export const TableRow = styled.tr`
   justify-content: center;
   align-items: center;
+
   &:nth-of-type(odd) {
     background: white;
   }
@@ -145,9 +161,18 @@ export const StyledTableRow = styled.tr`
 `;
 
 export const FluxogramaImg = styled.img`
-  width: 80vw;
-  height: 150vh;
+  width: 100%;
+  height: auto;
+  max-height: 150vh;
+  margin: 20px auto;
+
+  @media (max-width: ${breakpointMobile}) {
+    max-height: 100vh;
+  }
 `;
+
 export const TableImage = styled.img`
-  width: 60vw;
+  width: 100%;
+  max-width: 100vw;
+  margin: 0 auto;
 `;

@@ -6,7 +6,7 @@ import { goToHome } from "../cordinator";
 import { useNavigate } from "react-router-dom";
 
 const Exercicio05 = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const javaCode = `
   public interface Car {
     void accelerate(int speed); // Cada execução aumenta a velocidade em speed
@@ -31,12 +31,10 @@ public class CarImpl implements Car {
 }
   `;
 
-
   const syntaxHighlighterStyle = {
     ...a11yDark,
     'code[class*="language-"]': {
       ...a11yDark['code[class*="language-"]'],
-    
     },
   };
 
@@ -44,14 +42,13 @@ public class CarImpl implements Car {
     <Body>
       <h3>5. Escreva uma classe que implemente a seguinte interface abaixo:</h3>
       <CodeContainer>
-        <SyntaxHighlighter language="java" style={syntaxHighlighterStyle} >
+        <SyntaxHighlighter language="java" style={syntaxHighlighterStyle}>
           {javaCode}
         </SyntaxHighlighter>
       </CodeContainer>
-      <button onClick={()=>goToHome(navigate)}>Voltar</button>
+      <button onClick={() => goToHome(navigate)}>Voltar</button>
     </Body>
   );
 };
 
 export default Exercicio05;
-

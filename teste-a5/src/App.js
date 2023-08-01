@@ -6,10 +6,9 @@ import { GlobalStyle } from "./GlobalStyle.js";
 const App = () => {
   return (
     <BrowserRouter>
-    <GlobalStyle />
-  
-    <Router />
-  </BrowserRouter>
+      <GlobalStyle />
+      <Router />
+    </BrowserRouter>
   );
 };
 

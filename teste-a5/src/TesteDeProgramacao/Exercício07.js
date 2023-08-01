@@ -48,13 +48,12 @@ const Exercício07 = () => {
   console.log("A soma é: " + result);
 `;
 
-const syntaxHighlighterStyle = {
-  ...a11yDark,
-  'code[class*="language-"]': {
-    ...a11yDark['code[class*="language-"]'],
-  
-  },
-};
+  const syntaxHighlighterStyle = {
+    ...a11yDark,
+    'code[class*="language-"]': {
+      ...a11yDark['code[class*="language-"]'],
+    },
+  };
   return (
     <Body>
       <h3>
@@ -64,18 +63,18 @@ const syntaxHighlighterStyle = {
       </h3>
       <h2>Execução em Java:</h2>
       <CodeContainer>
-      <SyntaxHighlighter language="java" style={syntaxHighlighterStyle}>
-        {converteStringJava}
-      </SyntaxHighlighter>
+        <SyntaxHighlighter language="java" style={syntaxHighlighterStyle}>
+          {converteStringJava}
+        </SyntaxHighlighter>
       </CodeContainer>
       <h2>
         Por familiaridade com a linguagem, optei por executá-la também em
         Javascript:
       </h2>
       <CodeContainer>
-      <SyntaxHighlighter language="javascript" style={syntaxHighlighterStyle}>
-        {converteStringJS}
-      </SyntaxHighlighter>
+        <SyntaxHighlighter language="javascript" style={syntaxHighlighterStyle}>
+          {converteStringJS}
+        </SyntaxHighlighter>
       </CodeContainer>
       <button onClick={() => goToHome(navigate)}>Voltar</button>
     </Body>
